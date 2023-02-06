@@ -22,15 +22,17 @@ int main(){
     
     //Printing Gantt chart
     for(i=0;i<mainsum*2+3*n+1;i++)
-    	cout <<'_';
+    	cout <<'-';
     cout << endl;
     
     cout<<"| ";
     for(i=0;i<n;i++){
         temp = a[i];
-        while(temp--){
-        	cout << 'p'<<i+1;
-		}
+        for(j=0;j<a[i]-1;j++)
+            cout <<' ';
+        cout << 'p'<<i+1;
+        for(j=0;j<a[i]-1;j++)
+            cout <<' ';
 		cout<<" | ";
     }
     
