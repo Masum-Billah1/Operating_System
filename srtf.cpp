@@ -2,6 +2,7 @@
 using namespace std;
 int main(){
     freopen("srtf.txt", "r", stdin);
+    freopen("srtfout.txt", "w" ,stdout);
     //Input number
     int n,i,j,sum=0,mini,index,cnt=1;
     cin >> n;
@@ -73,8 +74,6 @@ int main(){
         else if(res[i]!='|')
             cout <<' ';
     }
-    cout << endl;
-    cout << str<<endl;
 
     for(i=0;i<n;i++){
         res_time[i]=-1;
@@ -91,7 +90,7 @@ int main(){
 
     cout <<"\n\nResponse time : \n";
     for(i=0;i<n;i++)
-        printf("\p[%d] = %2d\n",i+1,res_time[i]);
+        printf("[%d] = %2d\n",i+1,res_time[i]);
     cout << endl;
 
     for(i=str.size()-1;i>=0;i--){
@@ -104,7 +103,7 @@ int main(){
 
     cout <<"\n\nTurn around time : \n";
     for(i=0;i<n;i++)
-        printf("\p[%d] = %2d\n",i+1,turn_time[i]);
+        printf("[%d] = %2d\n",i+1,turn_time[i]);
     cout << endl;
 
     sum = 0;
@@ -115,7 +114,7 @@ int main(){
 
     cout <<"\n\nWaiting time : \n";
     for(i=0;i<n;i++)
-        printf("\p[%d] = %2d\n",i+1,wait_time[i]);
+        printf("[%d] = %2d\n",i+1,wait_time[i]);
     cout << endl;
 
     avgwt = sum*1.0/n;
