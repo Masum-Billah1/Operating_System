@@ -5,3 +5,4 @@
 <h3>Round Robin</h3>
 step 1 : Generating a string that contains only process number.<br>
 step 2 : Drawing a ganntt chart by calling a created functions.
+step 3 : implementing response time, turn around time, waiting time through individual functions.
