@@ -3,5 +3,5 @@
 <h4>Response time = Time of first response</h4>
 
 <h3>Round Robin</h3>
-step 1 : Generate a string that contains only process number.
-step 2 : Drawing a ganntt chart using a functions
+step 1 : Generate a string that contains only process number.<br>
+step 2 : Drawing a ganntt chart by calling a created functions.
