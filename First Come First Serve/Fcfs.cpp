@@ -105,20 +105,36 @@ void waiting_time(int n,string str){
 
 
 int main(){
-	freopen("fcfs.txt", "r", stdin);
-    freopen("fcfsout.txt", "w", stdout);
-    int n,temp,i;
+	freopen("sjf.txt", "r", stdin);
+    //freopen("sjfout.txt", "w", stdout);
+    int n,temp,i,j;
     cin >> n;
+    int index[n],temp_burst[n];
+    
+    for(i=0;i<n;i++)
+    	index[i] = i+1;
+    	
     for(i=0;i<n;i++){
     	cin >> burst_time[i];
+    	temp_burst[i] = burst_time[i];
 	}
-    string str;
-    for(i=0;i<n;i++){
-    	temp = burst_time[i];
-    	while(temp--){
-    		str+=i+'1';
+	for(i=0;i<n;i++){
+		for(j=i+1;j<n;j++){
+			if(temp_burst[i]>temp_burst[j]){
+				swap(temp_burst[i],temp_burst[j]);
+				swap(index[i],index[j]);
+			}
 		}
 	}
+	
+    string str;
+    for(i=0;i<n;i++){
+    	temp = temp_burst[i];
+    	while(temp--){
+    		str+=index[i]+'0';
+		}
+	}
+	cout << str<<endl;
     gantchart(str);
 	response_time(n,str);
 	turnaround_time(n,str);
