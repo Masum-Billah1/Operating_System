@@ -26,18 +26,15 @@ int main(){
 	
 	for(i=0;i<block_number;i++)
 		cout << block[i]<<' ';
-	cout << endl<<endl;
+	cout << endl;
 	
-	for(i=0;i<block_number;i++){
-		for(j=0;j<process_number;j++){
-			for(k=0;k<process_number;k++)
-				cout << unalocate[k]<<' ';
-			cout << endl;
+	for(i=0;i<process_number;i++){
+		for(j=0;j<block_number;j++){
 			if(unalocate[j] >= process[i]){
 				result[i] = j+1;
 				unalocate[j] -= process[i];
+				break;
 			}
-			break;
 		}
 	}
 	
