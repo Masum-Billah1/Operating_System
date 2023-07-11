@@ -1,0 +1,20 @@
+Compile : g++ filename.cpp
+
+Run
+Create : a create new_file_name
+Delate : a delete existing_file_name
+
+Move
+a move "full source location" "Full destination location"
+Example: 
+a move "G:/OS Lab/File Operation/masum.txt" "G:/OS Lab/Scheduling Algorithm/masum.txt"
+
+Rename
+a rename "full source location with previous name" "Full destination location with new name"
+Example: 
+a move "G:/OS Lab/File Operation/masum.txt" "G:/OS Lab/File Operation/masum2.txt"
+
+Copy
+a copy "full source location" "Full destination location"
+Example: 
+a move "G:/OS Lab/File Operation/masum.txt" "G:/OS Lab/Scheduling Algorithm/masum.txt"
